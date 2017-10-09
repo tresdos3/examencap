@@ -1,0 +1,27 @@
+<nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="http://bulma.io">
+      <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+
+    <button class="button navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link">
+      Seleciona Rol
+    </a>
+
+    <div class="navbar-dropdown">
+      <a class="navbar-item" (click)="CambiarSesion('Admin')" >
+        Administrador
+      </a>
+      <a class="navbar-item" (click)="CambiarSesion('Editor')">
+        Editor
+      </a>
+    </div>
+  </div>
+</nav>

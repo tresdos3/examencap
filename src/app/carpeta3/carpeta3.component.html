@@ -1,0 +1,9 @@
+<h1>Parrafo con 8000 caracteres</h1>
+<input type="text" name="" placeholder="Inserte Numero" [(ngModel)]="valor2">
+<select [(ngModel)]="valor">
+  <option value="capitalize" selected>Capitalize</option>
+  <option value="upper" selected>Upper</option>
+  <option value="lower" selected>Lower</option>
+  <option value="allfirtsupper" selected>All firts upper</option>
+</select>
+<p>{{ Valor | text : valor | cortar : valor2}}</p>
