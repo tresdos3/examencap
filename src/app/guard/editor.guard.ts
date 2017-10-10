@@ -11,10 +11,15 @@ export class EditorGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | boolean {
-    if (localStorage.getItem("Sesion") === "Editor") {
+    if (localStorage.getItem("Sesion") === "Admin") {
       this.toastr.success('Acceso Autorizado', 'Alerta!');
       console.log("Acceso Autorizado");
       console.log("Always Editor Guard");
+    }
+    else if(localStorage.getItem("Sesion") === "Editor"){
+      this.toastr.warning('Acceso No Autorizado', 'Alerta!');
+      console.log("Acceso no autorizado")
+      this.Router.navigate(["/"]);
     }
     else {
       this.toastr.warning('Acceso No Autorizado', 'Alerta!');

@@ -10,7 +10,7 @@ export class AdministradorGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | boolean {
-      if(localStorage.getItem("Sesion") === "Admin"){
+      if(localStorage.getItem("Sesion") === "Admin" || localStorage.getItem("Sesion") === "Editor"){
         this.toastr.success('Acceso Autorizado', 'Alerta!');
         console.log("Acceso Autorizado");
         console.log("Always Admin Guard");
